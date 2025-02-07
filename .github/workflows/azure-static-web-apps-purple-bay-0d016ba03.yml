@@ -19,8 +19,6 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v3
-        with:
-          submodules: false
 
       - name: Build and Deploy
         uses: azure/static-web-apps-deploy@v1
@@ -28,4 +26,3 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PURPLE_BAY_0D016BA03 }}
           app_location: "/"           # Ordner mit deinen HTML-Dateien
           output_location: ""         # Kein spezieller Build-Prozess
-          app_build_command: ""       # Kein Build-Prozess notwendig
