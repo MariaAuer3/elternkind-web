@@ -26,6 +26,7 @@ jobs:
         uses: azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_PURPLE_BAY_0D016BA03 }}
-          app_location: "/"          # Ordner, in dem sich deine HTML-Dateien befinden
-          output_location: ""        # Kein spezieller Build-Prozess
-          app_build_command: ""      # Kein Build-Prozess notwendig
+          deployment_action: "upload"  # Füge diesen fehlenden Parameter hinzu
+          app_location: "/"           # Ordner mit deinen HTML-Dateien
+          output_location: ""         # Kein spezieller Build-Prozess
+          app_build_command: ""       # Kein Build-Prozess notwendig
